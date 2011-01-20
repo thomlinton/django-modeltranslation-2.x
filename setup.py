@@ -1,13 +1,20 @@
-#!/usr/bin/env python
+from setuptools import setup, find_packages
 
-from distutils.core import setup
-
-setup(name='django-modeltranslation',
-      version='0.2.0.1',
-      description='Translates Django models using a registration approach.',
-      author='Peter Eschler, Dirk Eschler',
-      author_email='peschler@googlemail.com, eschler@gmail.com',
-      url='http://code.google.com/p/django-modeltranslation/',
-      packages=['modeltranslation', 'modeltranslation.management',
-                'modeltranslation.management.commands',],
-      license='New BSD')
+setup(
+    name='django-modeltranslation',
+    version='0.2.0.1',
+    description='Translates Django models using a registration approach.',
+    author='Peter Eschler, Dirk Eschler',
+    author_email='peschler@googlemail.com, eschler@gmail.com',
+    url='http://code.google.com/p/django-modeltranslation/',
+    packages=find_packages(),
+    zip_safe=False,
+    package_dir={'modeltranslation': 'modeltranslation'},
+    package_data = {
+        'modeltranslation': [
+            'static/css/*.css',
+            'static/js/*.js',
+        ],
+    },
+    license='New BSD'
+)
