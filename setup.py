@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='django-modeltranslation',
-    version='0.2.0.2',
+    version='0.2.0.3',
     description='Translates Django models using a registration approach.',
     author='Peter Eschler, Dirk Eschler',
     author_email='peschler@googlemail.com, eschler@gmail.com',
